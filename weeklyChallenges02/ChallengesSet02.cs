@@ -8,54 +8,146 @@ namespace weeklyChallenges02
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
+            return Char.IsLetter(c);
         }
 
         public bool CountOfElementsIsEven(string[] vals)
         {
-            throw new NotImplementedException();
+            int x = 0;
+            foreach (var item in vals)
+            {
+                x++;
+            }
+            if (x % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         public bool IsNumberEven(int number)
         {
-            throw new NotImplementedException();
+            if (number % 2 == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
 
         public bool IsNumberOdd(int num)
         {
-            throw new NotImplementedException();
+            if (num % 2 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            throw new NotImplementedException();
+            
+            
+            if (numbers == null)
+            {
+                return 0;
+            }
+            else if (numbers.Count() == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return numbers.Max() + numbers.Min();
+            }
         }
 
         public int GetLengthOfShortestString(string str1, string str2)
         {
-            throw new NotImplementedException();
+            
+            if (str1.Length>str2.Length)
+            {
+                return str2.Length;
+            }
+            else
+            {
+                return str1.Length;
+            }
+           
+
 
         }
 
         public int Sum(int[] numbers)
         {
-            throw new NotImplementedException();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            else
+            {
+                return numbers.Sum();
+
+            }
         }
 
         public int SumEvens(int[] numbers)
         {
-            throw new NotImplementedException();
+            List<int> x= new List<int>();
+            if (numbers == null)
+            {
+                return 0;
+            }
+            else
+            {
+                foreach (var item in numbers)
+                {
+                    if (item % 2 == 0)
+                    {
+                        x.Add(item);
+                    }
+                }
+
+                return x.Sum();
+            }
         }
 
         public bool IsSumOdd(List<int> numbers)
         {
-            throw new NotImplementedException();
+            if (numbers==null)
+            {
+                return false;
+            }
+            else if (numbers.Sum() % 2 == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         public long CountOfPositiveOddsBelowNumber(long number)
         {
-            throw new NotImplementedException();
+            int x = 0;
+            for (int i = 0; i < number; i++)
+            {
+                if (i % 2 != 0)
+                {
+                    x++;
+                }
+            }
+            return x;
         }
     }
 }
